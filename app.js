@@ -4,7 +4,7 @@
 //let paragrafo = document.querySelector('p');
 //paragrafo.innerHTML = 'Escolha um número entre 1 e 10';
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = 50;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -17,7 +17,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial() {
   exibirTextoNaTela('h1', 'Jogo do número secreto');
-  exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+  exibirTextoNaTela('p', 'Escolha um número entre 1 e 100');
 }
 
 exibirMensagemInicial();
@@ -28,7 +28,7 @@ function verificarChute() {
   let chute = document.querySelector('input').value; //.value é porque não é um texto definido é um valor que o usuário vai inserir
   console.log(chute == numeroSecreto);
 
-  if (chute <= 0 || chute >= 11) {
+  if (chute <= 0 || chute >= 51) {
     exibirTextoNaTela('h1', 'Tente Novamente !!!');
     exibirTextoNaTela('p', `Escolha um número entre 1 e ${numeroLimite}`);
   } else {
